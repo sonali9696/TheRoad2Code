@@ -1,0 +1,47 @@
+set title "Throughput vs. Time at Data Rate 1.0"
+set xlabel "Time (sec)"
+set ylabel "Throughput (kbps)"
+plot 'throughput.txt' index 0 with linespoints title 'AODV', \
+     '' index 1 with linespoints title 'DSDV', \
+     '' index 2 with linespoints title 'DumbAgent', \
+     '' index 3 with linespoints title 'AOMDV'
+
+set term png
+set output "throughput.png"
+replot
+
+set title "Delay vs. Time at Data Rate 1.0"
+set xlabel "Time (sec)"
+set ylabel "Delay (ms)"
+plot 'delay.txt' index 0 with linespoints title 'AODV', \
+     '' index 1 with linespoints title 'DSDV', \
+     '' index 2 with linespoints title 'DumbAgent', \
+     '' index 3 with linespoints title 'AOMDV'
+
+set term png
+set output "delay.png"
+replot
+
+set title "Packet Loss vs. Time at Data Rate 1.0"
+set xlabel "Time (sec)"
+set ylabel "Packet loss"
+plot 'loss.txt' index 0 with linespoints title 'AODV', \
+     '' index 1 with linespoints title 'DSDV', \
+     '' index 2 with linespoints title 'DumbAgent', \
+     '' index 3 with linespoints title 'AOMDV'
+
+set term png
+set output "loss.png"
+replot
+
+set title "Routing Overhead vs. Time at Data Rate 1.0"
+set xlabel "Time (sec)"
+set ylabel "Routing Overhead"
+plot 'overhead.txt' index 0 with linespoints title 'AODV', \
+     '' index 1 with linespoints title 'DSDV', \
+     '' index 2 with linespoints title 'DumbAgent', \
+     '' index 3 with linespoints title 'AOMDV'
+
+set term png
+set output "overhead.png"
+replot
